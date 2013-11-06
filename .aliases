@@ -1,0 +1,20 @@
+# Global aliases
+
+alias ..="cd .."
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias wk="cd ~/Travail"
+
+# Show/hide hidden files in Finder
+alias showhidden="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hidehidden="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# Virtual environments (Python)
+
+# default
+alias venv="source ~/.virtualenvs/default/bin/activate;"
+
+# Holyvice dev
+alias trenzea="cd ~/Travail/Trenzea"
+alias venv_trenzea="source ~/.virtualenvs/trenzea/bin/activate; export DJANGO_SETTINGS_MODULE=trenzea.settings.local"
+alias trenzea_init="trenzea; venv_trenzea; python manage.py runserver"
