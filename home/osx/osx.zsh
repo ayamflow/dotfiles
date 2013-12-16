@@ -1,6 +1,9 @@
-#!/usr/bin/env bash
-
+#!/usr/bin/env zsh
+#
 # Tweaks for OS X.
+
+# rm puts file into trash (brew install trash)
+alias rm='trash'
 
 # Always open everything in Finder's list view. This is important.
 defaults write com.apple.Finder FXPreferredViewStyle Nlsv
@@ -44,6 +47,10 @@ defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # When performing a search, search the current folder by default
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+# Show/hide hidden files in Finder
+alias showhidden="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hidehidden="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
 # Disable hibernation (speeds up entering sleep mode)
 # sudo pmset -a hibernatemode 0
