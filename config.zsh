@@ -1,5 +1,3 @@
-#!/usr/bin/env zsh
-
 #PIP CONFIG
 export PIP_REQUIRE_VIRTUALENV=true
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
@@ -11,5 +9,13 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-# Z path
-. /usr/local/bin/z/z.sh
+# script files
+
+# Abroad is a per-computer configuration file (if used on different machines)
+if [ -f "~/.dotfiles/abroad.zsh" ]; then
+    source ~/.dotfiles/abroad.zsh
+fi
+
+source ~/.dotfiles/aliases.zsh
+source ~/.dotfiles/osx/osx.zsh
+source /usr/local/bin/z/z.sh
