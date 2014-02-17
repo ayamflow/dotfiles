@@ -13,4 +13,4 @@ alias gg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 alias venv="source ~/.virtualenvs/default/bin/activate;"
 
 # Use hub with git
-alias git=hub
+alias github=hub
