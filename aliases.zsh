@@ -14,3 +14,9 @@ alias venv="source ~/.virtualenvs/default/bin/activate;"
 
 # Use hub with git
 alias github=hub
+# git create -d "my-repo" creates a new github repo
+
+# bitbucket-create $login my-repo creates a new bitbucket repo
+function bitbucket-create() {
+   curl --user $1 https://api.bitbucket.org/1.0/repositories/ --data name=$2
+}
