@@ -16,7 +16,22 @@ alias venv="source ~/.virtualenvs/default/bin/activate;"
 alias github=hub
 # git create -d "my-repo" creates a new github repo
 
-# bitbucket-create $login my-repo creates a new bitbucket repo
+# bitbucket-create my-repo creates a new bitbucket repo
 function bitbucket-create() {
-   curl --user $1 https://api.bitbucket.org/1.0/repositories/ --data name=$2
+    if [[ -z $1 ]]
+        then
+            echo "You need to supply the repository name."
+            return 1
+    fi
+    echo "Enter host login for Bitbucket:"
+    read login
+    res=$(curl -ss --user $login https://api.bitbucket.org/1.0/repositories/ --data name=$1)
+   if [[ -z $res ]]
+    then
+        echo "Could not create repository"
+        return 1
+    else
+        echo "Repository $1 create with success."
+        return 0
+    fi
 }
