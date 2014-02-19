@@ -17,5 +17,6 @@ if [ -f "~/.dotfiles/abroad.zsh" ]; then
 fi
 
 source ~/.dotfiles/aliases.zsh
+source ~/.dotfiles/git.zsh
 source ~/.dotfiles/osx/osx.zsh
 source /usr/local/bin/z/z.sh
