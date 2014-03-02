@@ -8,3 +8,8 @@ function sublime-sync() {
         ln -s ~/Dropbox/Sublime\ Text\ 2/$folder $subldir/$folder
     done
 }
+
+function atom-sync() {
+    rm ~/.atom
+    ln -s ~/Dropbox/Atom/.atom ~/.atom
+}
