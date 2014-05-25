@@ -12,3 +12,4 @@ source $ZSH/oh-my-zsh.sh
 
 # Start custom dotfiles
 source ~/.dotfiles/config.zsh
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

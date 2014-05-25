@@ -2,6 +2,9 @@
 #
 # Tweaks for OS X.
 
+# Prevent EMFILE too many open files when watching
+ulimit -n 10240
+
 # rm puts file into trash (brew install trash)
 alias rm='trash'
 
@@ -24,7 +27,7 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Restart automatically if the computer freezes
-systemsetup -setrestartfreeze on
+# systemsetup -setrestartfreeze on
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
