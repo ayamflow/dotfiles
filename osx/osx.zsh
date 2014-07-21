@@ -64,3 +64,6 @@ alias hidehidden="defaults write com.apple.finder AppleShowAllFiles -bool false 
 # chmod 755 to reverse
 # Disable the sound effects on boot
 # sudo nvram SystemAudioVolume=%80﻿
+
+# Disabled dashboard
+defaults write com.apple.dashboard mcx-disabled -boolean YES
