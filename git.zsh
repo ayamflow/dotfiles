@@ -1,6 +1,8 @@
 # Use hub with git
 alias github=hub
 
+alias glist="git diff-tree --no-commit-id --name-only -r"
+
 # bitbucket-create user/repo
 function bitbucket-create() {
     if [[ -z $1 ]]

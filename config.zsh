@@ -21,3 +21,4 @@ source ~/.dotfiles/git.zsh
 source ~/.dotfiles/functions.zsh
 source ~/.dotfiles/osx/osx.zsh
 source /usr/local/bin/z/z.sh
+source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
