@@ -49,3 +49,18 @@ function github-create() {
 function github-clone() {
     $(git clone https://github.com/$1)
 }
+
+# npmpublish major/minor/patch
+function npmpublish() {
+  git pull --rebase && \
+  rm -rf node_modules && \
+  npm install && \
+  npm test && \
+
+  mversion ${1:=patch} -m -n && \
+
+  npm publish && \
+
+  git push origin master && \
+  git push origin master --tags
+}
