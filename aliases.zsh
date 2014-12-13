@@ -2,7 +2,6 @@
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias wk="cd ~/Travail"
-alias omni="cd ~/Travail/Gobelins/Omnisense"
 
 # Git
 alias ga="git add -A"
@@ -11,4 +10,3 @@ alias gg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 
 # Virtual environments (Python)
 alias venv="source ~/.virtualenvs/default/bin/activate;"
-alias lyn="learnyounode"

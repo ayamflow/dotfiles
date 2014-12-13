@@ -7,8 +7,18 @@ if [[ "$1" == "install" ]]; then
        mv ~/.zshrc ~/.zshrc.bak
     fi
 
+    # install oh-my-zsh
+    curl -L http://install.ohmyz.sh | sh
+    # install oh-my-zsh syntax highlight
+    git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/zsh-syntax-highlighting
+    # install z
+    git clone https://github.com/rupa/z /usr/local/bin/z/
+
     ln -s ~/.dotfiles/ayamflow.zsh-theme ~/.oh-my-zsh/themes/ayamflow.zsh-theme
     ln -s ~/.dotfiles/.zshrc ~/.zshrc
+
+    # create subl shortcut for Sublime Text
+    ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
     source ~/.zshrc
     echo "Dotfiles installed."
