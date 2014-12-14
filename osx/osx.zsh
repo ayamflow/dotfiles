@@ -3,10 +3,10 @@
 # Tweaks for OS X.
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "flo.macbook"
-sudo scutil --set HostName "flo.macbook"
-sudo scutil --set LocalHostName "flo-macbook"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "flo-macbook"
+#sudo scutil --set ComputerName "flo.macbook"
+#sudo scutil --set HostName "flo.macbook"
+#sudo scutil --set LocalHostName "flo-macbook"
+#sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "flo-macbook"
 
 
 # Prevent EMFILE too many open files when watching
@@ -71,7 +71,7 @@ alias hidehidden="defaults write com.apple.finder AppleShowAllFiles -bool false 
 # chmod 755 to reverse
 
 # Disable the sound effects on boot
-sudo nvram SystemAudioVolume=" "
+# sudo nvram SystemAudioVolume=" "
 
 # Disabled dashboard
 defaults write com.apple.dashboard mcx-disabled -boolean YES
