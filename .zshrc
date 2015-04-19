@@ -2,9 +2,6 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="ayamflow"
 
-# Example aliases
-alias zshconfig="subl ~/.zshrc"
-
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 plugins=(git)
 
