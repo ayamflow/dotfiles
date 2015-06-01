@@ -23,6 +23,15 @@ if [[ "$1" == "install" ]]; then
     # install quicklook plugins
     brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
 
+    # setup some git config
+    git config --global user.name "Florian Morel"
+    git config --global user.email ayamflow@gmail.com
+    git config --global push.default current
+    git config --global credential.helper osxkeychain
+    git config --global color.ui auto
+    git config --global mergetool.keepbackup false
+    git config --global merge.tool opendiff
+
     source ~/.zshrc
     echo "Dotfiles installed."
 
