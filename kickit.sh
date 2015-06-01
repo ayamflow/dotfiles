@@ -20,6 +20,9 @@ if [[ "$1" == "install" ]]; then
     # create subl shortcut for Sublime Text
     ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
+    # install quicklook plugins
+    brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+
     source ~/.zshrc
     echo "Dotfiles installed."
 
