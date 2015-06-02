@@ -13,6 +13,7 @@
 ulimit -n 10240
 
 # rm puts file into trash (brew install trash)
+brew install trash
 alias rm='trash'
 
 # Always open everything in Finder's list view. This is important.
