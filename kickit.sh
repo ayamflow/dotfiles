@@ -20,6 +20,11 @@ if [[ "$1" == "install" ]]; then
     # create subl shortcut for Sublime Text
     ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
+    # install brew, brew cask, trash
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    brew install caskroom/cask/brew-cask
+    brew install trash
+
     # install quicklook plugins
     brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
 
