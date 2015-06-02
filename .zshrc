@@ -7,6 +7,9 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# Put brew cask apps in the root Apps dir
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 # Start custom dotfiles
 source ~/.dotfiles/config.zsh
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
