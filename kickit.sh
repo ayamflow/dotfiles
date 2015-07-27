@@ -7,6 +7,20 @@ if [[ "$1" == "install" ]]; then
        mv ~/.zshrc ~/.zshrc.bak
     fi
 
+    # install brew, brew cask, trash
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    brew install caskroom/cask/brew-cask
+    brew install trash git node wget
+
+    # install quicklook plugins
+    brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+
+    # Install some good stuff
+    brew cask install sublime-text alfred slack iterm2 google-chrome firefox skype xtrafinder
+
+    # create subl shortcut for Sublime Text
+    ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+
     # install oh-my-zsh
     curl -L http://install.ohmyz.sh | sh
     # install oh-my-zsh syntax highlight
@@ -17,16 +31,9 @@ if [[ "$1" == "install" ]]; then
     ln -s ~/.dotfiles/ayamflow.zsh-theme ~/.oh-my-zsh/themes/ayamflow.zsh-theme
     ln -s ~/.dotfiles/.zshrc ~/.zshrc
 
-    # create subl shortcut for Sublime Text
-    ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
-
-    # install brew, brew cask, trash
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    brew install caskroom/cask/brew-cask
-    brew install trash
-
-    # install quicklook plugins
-    brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+    # Install Composer (PHP)
+    curl -sS https://getcomposer.org/installer | php
+    mv composer.phar /usr/local/bin/composer.phar
 
     # setup some git config
     git config --global user.name "Florian Morel"
@@ -36,6 +43,7 @@ if [[ "$1" == "install" ]]; then
     git config --global color.ui auto
     git config --global mergetool.keepbackup false
     git config --global merge.tool opendiff
+    git config --global core.filemode false
 
     source ~/.zshrc
     echo "Dotfiles installed."
