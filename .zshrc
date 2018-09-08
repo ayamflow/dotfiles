@@ -13,3 +13,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # Start custom dotfiles
 source ~/.dotfiles/config.zsh
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+export PATH=$PATH:/opt/local/bin
+export MANPATH=$MANPATH:/opt/local/share/man
+export INFOPATH=$INFOPATH:/opt/local/share/info

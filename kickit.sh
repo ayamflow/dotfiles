@@ -44,6 +44,7 @@ if [[ "$1" == "install" ]]; then
     git config --global mergetool.keepbackup false
     git config --global merge.tool opendiff
     git config --global core.filemode false
+    git config --global core.excludesfile ~/.gitignore-global
 
     source ~/.zshrc
     echo "Dotfiles installed."
